@@ -149,3 +149,26 @@ a:hover, a:focus {
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 }
+
+/* Styles for 16:9 aspect ratio screens to prevent scrolling */
+@media (min-width: 769px) and (aspect-ratio: 16/9) {
+    body {
+        overflow: hidden; /* Hide scrollbars */
+    }
+
+    main {
+        padding: 15px; /* Adjust padding */
+    }
+
+    .grid-section {
+        height: 100%;
+        grid-template-rows: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .grid-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
