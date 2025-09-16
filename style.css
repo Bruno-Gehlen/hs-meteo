@@ -162,9 +162,18 @@ a:hover, a:focus {
 
     .grid-section {
         height: 100%;
-        grid-template-rows: 1fr 1fr;
         gap: 15px;
+        grid-template-columns: 2fr 1.5fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "main mapa previsao"
+            "main mapa radar";
     }
+
+    .grid-item:nth-child(1) { grid-area: main; }
+    .grid-item:nth-child(2) { grid-area: mapa; }
+    .grid-item:nth-child(3) { grid-area: previsao; }
+    .grid-item:nth-child(4) { grid-area: radar; }
 
     .grid-item img {
         height: 100%;
